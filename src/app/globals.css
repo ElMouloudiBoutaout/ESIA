@@ -4,3 +4,120 @@ html,
 body {
   height: 100%;
 }
+/* === Brand gradient text (inspired by PSTB) === */
+.text-gradient-brand {
+  background-image: linear-gradient(
+    90deg,
+    #cf1a7d 0%,
+    #ae1ca9 35%,
+    #8836f2 70%,
+    #6b3efd 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+/* === Brand gradient for main headings === */
+h1,
+h2 {
+  background-image: linear-gradient(
+    90deg,
+    #cf1a7d 0%,
+    #ae1ca9 35%,
+    #8836f2 70%,
+    #6b3efd 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+/* === Brand gradient for main headings === */
+h1,
+h2 {
+  background-image: linear-gradient(
+    90deg,
+    #cf1a7d 0%,
+    #ae1ca9 35%,
+    #8836f2 70%,
+    #6b3efd 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+/* === Brand gradient text (inspired by PSTB) === */
+.text-gradient-brand {
+  background-image: linear-gradient(
+    90deg,
+    #cf1a7d 0%,
+    #ae1ca9 35%,
+    #8836f2 70%,
+    #6b3efd 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* === Buttons (no @apply -> avoids Turbopack/Tailwind apply issues) === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.25rem;
+
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+
+  text-decoration: none;
+  transition: transform 0.15s ease, filter 0.15s ease, background-color 0.15s ease,
+    border-color 0.15s ease, color 0.15s ease;
+}
+
+.btn:active {
+  transform: scale(0.99);
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.18);
+}
+
+/* Gradient primary */
+.btn-gradient {
+  color: #fff;
+  background-image: linear-gradient(
+    90deg,
+    #cf1a7d 0%,
+    #ae1ca9 35%,
+    #8836f2 70%,
+    #6b3efd 100%
+  );
+  box-shadow: 0 10px 30px rgba(107, 62, 253, 0.18);
+}
+
+.btn-gradient:hover {
+  filter: brightness(1.08);
+}
+
+/* Outline secondary */
+.btn-outline {
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(63, 63, 70, 1); /* zinc-700-ish */
+}
+
+.btn-outline:hover {
+  background: rgba(24, 24, 27, 0.6); /* zinc-900/60-ish */
+}
+
+/* Small size for header buttons */
+.btn-sm {
+  padding: 0.55rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 0.75rem;
+}

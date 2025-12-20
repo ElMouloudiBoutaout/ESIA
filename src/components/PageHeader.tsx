@@ -19,7 +19,7 @@ export default function PageHeader({
         <div className="max-w-2xl">
           {eyebrow ? <p className="text-sm text-zinc-300">{eyebrow}</p> : null}
 
-          <h1 className="mt-2 text-3xl font-semibold text-white md:text-4xl">
+          <h1 className="mt-2 text-4xl sm:text-5xl font-semibold text-gradient-brand tracking-tight">
             {title}
           </h1>
 
@@ -32,7 +32,7 @@ export default function PageHeader({
               {primaryCta ? (
                 <Link
                   href={primaryCta.href}
-                  className="no-underline inline-flex rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black hover:bg-zinc-200 transition"
+                  className="btn-gradient no-underline inline-flex items-center justify-center px-5 py-3 text-sm"
                 >
                   {primaryCta.label}
                 </Link>
@@ -41,7 +41,7 @@ export default function PageHeader({
               {secondaryCta ? (
                 <Link
                   href={secondaryCta.href}
-                  className="no-underline inline-flex rounded-xl border border-zinc-700 px-5 py-3 text-sm font-semibold text-white hover:bg-zinc-900 transition"
+                  className="no-underline inline-flex items-center justify-center rounded-xl border border-zinc-700 px-5 py-3 text-sm font-semibold text-white hover:bg-zinc-900 transition"
                 >
                   {secondaryCta.label}
                 </Link>
