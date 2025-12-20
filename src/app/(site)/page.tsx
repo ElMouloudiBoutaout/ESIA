@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Container from "@/components/Container";
+import AnimatedHeadline from "@/components/AnimatedHeadline";
 
 function Pill({ children }: { children: React.ReactNode }) {
   return (
@@ -89,9 +90,18 @@ export default function HomePage() {
             ESIA — School of Applied Artificial Intelligence
           </p>
 
-          <h1 className="mt-4 text-4xl sm:text-6xl font-semibold tracking-tight text-gradient-brand">
-            Machine Learning, Deep Learning, GenAI & Emerging Technologies
-          </h1>
+          {/* ✅ GSAP-like animated headline */}
+          <div className="mt-4">
+            <AnimatedHeadline
+              as="h1"
+              className="text-4xl sm:text-6xl font-semibold tracking-tight text-gradient-brand"
+              lines={[
+                "Machine Learning,",
+                "Deep Learning, GenAI",
+                "& Emerging Technologies",
+              ]}
+            />
+          </div>
 
           <p className="mt-5 text-zinc-300 leading-relaxed max-w-3xl">
             Practical, project-driven programs designed to train professionals
@@ -114,7 +124,6 @@ export default function HomePage() {
               View Projects
             </Link>
 
-            {/* Gradient CTA (no globals needed) */}
             <Link
               href="/contact"
               className="no-underline inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold text-white transition

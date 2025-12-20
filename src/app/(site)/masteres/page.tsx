@@ -102,7 +102,7 @@ export default function MasteresPage() {
               <Card
                 key={m.slug}
                 title={m.title}
-                subtitle={m.subtitle} // ✅ ok même si undefined maintenant
+                subtitle={m.subtitle}
                 href={`/masteres/${m.slug}`}
                 points={m.points ?? m.objectifs ?? m.programme ?? []}
               />

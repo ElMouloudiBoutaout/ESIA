@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import WorldCohortBadge from "@/components/WorldCohortBadge";
 
 const nav = [
   { href: "/", label: "Home" },
@@ -43,18 +46,35 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* CTA */}
-        <Link
-          href="/contact"
-          className="btn-gradient no-underline inline-flex items-center px-4 py-2 text-sm font-semibold"
-        >
-          Request brochure
-        </Link>
+        {/* RIGHT SIDE */}
+        <div className="hidden md:flex items-center gap-3">
+          <WorldCohortBadge />
+          <Link
+            href="/contact"
+            className="btn-gradient no-underline inline-flex items-center px-4 py-2 text-sm font-semibold"
+          >
+            Request brochure
+          </Link>
+        </div>
+
+        {/* CTA MOBILE */}
+        <div className="md:hidden">
+          <Link
+            href="/contact"
+            className="btn-gradient no-underline inline-flex items-center px-4 py-2 text-sm font-semibold"
+          >
+            Brochure
+          </Link>
+        </div>
       </div>
 
       {/* NAV MOBILE */}
       <div className="md:hidden border-t border-zinc-900">
-        <div className="mx-auto max-w-6xl px-4 py-3 flex flex-wrap gap-3">
+        <div className="mx-auto max-w-6xl px-4 py-3 flex flex-wrap gap-3 items-center">
+          <div className="w-full">
+            <WorldCohortBadge />
+          </div>
+
           {nav.map((item) => (
             <Link
               key={item.href}
