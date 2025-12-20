@@ -1,6 +1,7 @@
 import Container from "@/components/Container";
 import PageHeader from "@/components/PageHeader";
 import { masteres } from "@/data/masteres";
+import WorldCohortBadge from "@/components/WorldCohortBadge";
 import Link from "next/link";
 
 function Badge({ children }: { children: React.ReactNode }) {
@@ -74,6 +75,7 @@ export default function MasteresPage() {
           subtitle="Practice-oriented tracks: Machine Learning, Deep Learning, GenAI, MLOps and deployment. Goal: train profiles able to deliver production-ready AI."
           primaryCta={{ label: "Request a brochure", href: "/contact" }}
           secondaryCta={{ label: "Discover ESIA", href: "/about" }}
+          rightSlot={<WorldCohortBadge />}
         />
 
         {/* GRID */}

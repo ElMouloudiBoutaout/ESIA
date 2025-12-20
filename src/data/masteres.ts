@@ -1,201 +1,200 @@
-export type Mastere = {
+export type MasterProgram = {
   slug: string;
   title: string;
   subtitle?: string;
-
-  // Contenu principal
   description?: string;
-
-  // Listes pédagogiques
   points?: string[];
-  objectifs?: string[];
-  programme?: string[];
-
-  // Infos pratiques
   format?: string[];
-
-  // Outils (FR / EN pour compatibilité)
-  outils?: string[];
   tools?: string[];
-
-  // Compléments
-  competences?: string[];
-  debouches?: string[];
+  programme?: string[];
 };
 
-
-export const masteres: Mastere[] = [
+export const masteres: MasterProgram[] = [
   {
     slug: "data-scientist-4-0",
     title: "Data Scientist 4.0",
-    subtitle:
-      "End-to-end applied Data Science: from data preparation to model deployment, with real-world delivery standards.",
+    subtitle: "End-to-end ML + GenAI, from data to production systems",
+    description:
+      "Data Scientist 4.0 is a modern, applied track built for people who want to ship real AI products. You’ll learn the full lifecycle: data preparation, modeling (ML & deep learning), GenAI patterns, evaluation, deployment, monitoring, and iteration with production constraints.",
     points: [
-      "Build production-ready ML pipelines (data → model → API)",
-      "Experiment tracking, reproducibility, and model evaluation",
-      "Deploy, monitor, and iterate like a real DS/MLOps team",
+      "Build reliable ML pipelines with strong data quality foundations",
+      "Train, evaluate, and debug models using robust methodology",
+      "Apply GenAI patterns (RAG, agents, guardrails) with measurable KPIs",
+      "Deploy production services (FastAPI), containers (Docker) and CI/CD basics",
+      "Deliver a portfolio of end-to-end projects with documentation",
     ],
-    objectifs: [
-      "Master the full Data Science lifecycle with strong fundamentals",
-      "Train, evaluate, and improve ML models using robust validation",
-      "Package and deploy ML solutions as reliable services",
-      "Deliver a portfolio of concrete, documented projects",
+    format: [
+      "Flexible: 4-week intensive or 10-week part-time format",
+      "Weekly deliverables + checkpoints",
+      "Portfolio-based evaluation",
+      "Remote-friendly (worldwide cohorts)",
     ],
-    competences: [
-      "Python for Data Science",
-      "Data preparation & feature engineering",
-      "Supervised & unsupervised learning",
-      "Model evaluation & calibration",
-      "Experiment tracking (MLflow basics)",
-      "API deployment (FastAPI)",
-      "Docker basics for packaging",
-      "Monitoring fundamentals (metrics, drift awareness)",
-      "Git workflow (branches, PR mindset, versioning)",
+    tools: [
+      "Python, Pandas, NumPy",
+      "scikit-learn, PyTorch or TensorFlow",
+      "FastAPI, Docker",
+      "Git/GitHub, CI/CD fundamentals",
+      "MLflow basics (tracking & versioning)",
+      "Vector DB concepts (RAG)",
     ],
     programme: [
-      "Data preparation: cleaning, missing values, outliers, encoding",
-      "Feature engineering: scaling, leakage prevention, baselines",
-      "Modeling: regression, classification, clustering",
-      "Evaluation: metrics, cross-validation, thresholding",
-      "Interpretability: feature importance, practical explanations",
-      "Experiment tracking: runs, parameters, metrics, artifacts",
-      "Deployment: FastAPI endpoints, request schemas, testing",
-      "Packaging: Docker image, environment reproducibility",
-      "Production basics: logging, monitoring, drift concepts",
-      "Capstone project: a complete end-to-end delivery",
-    ],
-    debouches: [
-      "Data Scientist",
-      "Machine Learning Engineer (junior / applied)",
-      "AI Project Analyst",
-      "Applied AI Consultant",
-      "MLOps Analyst (junior)",
+      "Module 1 — Data foundations: quality checks, leakage, reproducibility, feature engineering",
+      "Module 2 — Supervised ML: classification/regression, metrics, validation, error analysis",
+      "Module 3 — Deep Learning: neural nets, training strategy, overfitting control",
+      "Module 4 — GenAI: RAG fundamentals, prompt strategy, evaluation, safety/guardrails",
+      "Module 5 — Deployment: FastAPI endpoints, Docker image, environment management",
+      "Module 6 — MLOps basics: tracking, model versioning, monitoring signals, iteration",
+      "Capstone — End-to-end project with demo + documentation + portfolio deliverable",
     ],
   },
 
   {
-    slug: "machine-learning-engineering",
-    title: "Machine Learning Engineering",
-    subtitle:
-      "Design robust ML systems: reproducibility, testing, CI/CD mindset, deployment patterns, and reliability.",
+    slug: "industrial-data-analytics",
+    title: "Industrial Data Analytics",
+    subtitle: "Applied analytics for factories, supply chains, and operations",
+    description:
+      "Industrial Data Analytics focuses on real operational constraints: messy data, complex processes, and decision-making under uncertainty. You’ll learn analytics patterns used in industry: KPI frameworks, root-cause analysis, forecasting, anomaly detection, and optimization-oriented reporting.",
     points: [
-      "Clean project structure and engineering best practices",
-      "Deploy ML models with APIs and containers",
-      "Operate ML systems: monitoring, drift and retraining strategy",
+      "Model industrial processes and define actionable KPIs",
+      "Build analytics workflows from raw data to decision dashboards",
+      "Forecast demand/throughput and detect anomalies",
+      "Explain insights to operations stakeholders with clear storytelling",
+      "Deliver production-grade reporting assets and data products",
     ],
-    objectifs: [
-      "Build reliable ML services with clean architecture",
-      "Automate training and deployment workflows",
-      "Apply software engineering practices to ML projects",
-      "Understand monitoring and lifecycle management in production",
+    format: [
+      "Project-driven learning with realistic case studies",
+      "Deliverables: dashboards, reports, notebooks, and documented analyses",
+      "Remote-friendly (worldwide cohorts)",
     ],
-    competences: [
-      "Project structure & best practices",
-      "Testing basics for ML code",
-      "CI/CD principles for ML",
-      "Docker packaging",
-      "FastAPI deployment patterns",
-      "Logging & monitoring basics",
-      "Drift & retraining strategy",
+    tools: [
+      "SQL, Python (Pandas)",
+      "Power BI / Tableau fundamentals (optional)",
+      "Time-series basics (forecasting)",
+      "Data quality checks & monitoring mindset",
+      "Git fundamentals for analytics projects",
     ],
     programme: [
-      "ML project structure: src/, scripts/, configs, artifacts",
-      "Data quality checks and validation rules",
-      "Training pipeline: reproducibility, parameters, evaluation",
-      "Testing: unit tests for transformations and utilities",
-      "API service: prediction endpoint, schemas, input validation",
-      "Docker: build/run images, environment consistency",
-      "CI/CD basics: automated checks and build pipeline mindset",
-      "Monitoring: logs, metrics, alerts, drift signals",
-      "Retraining strategy: triggers, scheduling, versioning",
-    ],
-    debouches: [
-      "Machine Learning Engineer",
-      "MLOps Engineer (junior / applied)",
-      "AI Software Engineer (applied ML)",
-      "Data Engineer with ML focus",
+      "Module 1 — Industrial data: sources, sensors/ERP-style data, cleaning & validation",
+      "Module 2 — KPI systems: throughput, yield, scrap, downtime, OEE-style thinking",
+      "Module 3 — Diagnostic analytics: segmentation, root-cause analysis, statistical reasoning",
+      "Module 4 — Time series: forecasting, seasonality, baseline models + evaluation",
+      "Module 5 — Anomaly detection: rules, statistical baselines, practical thresholds",
+      "Module 6 — Reporting & storytelling: stakeholder-ready dashboards & narratives",
+      "Capstone — Industrial analytics case: end-to-end report + dashboard + recommendations",
     ],
   },
 
   {
-    slug: "deep-learning",
-    title: "Deep Learning (NLP & Computer Vision)",
-    subtitle:
-      "Build neural networks for vision and language: training, regularization, evaluation, and inference pipelines.",
+    slug: "applied-ml-engineer",
+    title: "Applied ML Engineer",
+    subtitle: "Modeling + engineering to ship reliable ML features",
+    description:
+      "This track is designed for people who want to build ML features that survive in real systems. You focus on practical ML, evaluation, inference constraints, and engineering patterns used to deliver stable model services.",
     points: [
-      "Neural networks from fundamentals to practical training loops",
-      "CV and NLP workflows (datasets → models → inference)",
-      "Optimization, overfitting control, and deployment basics",
+      "Build robust ML baselines and iterate fast with clean experiments",
+      "Design inference pipelines with performance & reliability in mind",
+      "Deploy services and manage versioning correctly",
+      "Write maintainable ML code with tests and reusable modules",
     ],
-    objectifs: [
-      "Understand deep learning fundamentals and training dynamics",
-      "Build models for CV and NLP tasks",
-      "Create inference pipelines and evaluate performance properly",
-      "Ship a deep learning mini-project with reproducible results",
+    format: [
+      "Hands-on labs + deliverables",
+      "Remote-friendly (worldwide cohorts)",
     ],
-    competences: [
-      "Neural network fundamentals",
-      "CNN basics for vision",
-      "Embeddings and NLP basics",
-      "Training strategies & regularization",
-      "Evaluation and error analysis",
-      "Inference pipeline design",
+    tools: [
+      "Python, scikit-learn",
+      "FastAPI",
+      "Docker",
+      "Git/GitHub",
+      "MLflow basics",
     ],
     programme: [
-      "Deep learning foundations: tensors, backprop intuition, loss",
-      "Training workflow: data loaders, batching, augmentation",
-      "Overfitting control: regularization, dropout, early stopping",
-      "Computer Vision: classification, practical dataset pipeline",
-      "NLP: embeddings, text preprocessing, baseline architectures",
-      "Evaluation: confusion matrix, precision/recall, error analysis",
-      "Inference: batch inference vs API inference, performance basics",
-      "Mini-project: end-to-end deep learning delivery",
-    ],
-    debouches: [
-      "Deep Learning Engineer (junior / applied)",
-      "Computer Vision Engineer (junior)",
-      "NLP Engineer (junior / applied)",
-      "AI Engineer",
+      "ML baselines & evaluation discipline",
+      "Pipeline architecture for training/inference",
+      "Packaging & reproducibility",
+      "Service deployment + versioning + rollback mindset",
+      "Capstone ML service project",
     ],
   },
 
   {
-    slug: "artificial-intelligence",
-    title: "Artificial Intelligence (Applied)",
-    subtitle:
-      "A complete applied AI track: classical ML, modern GenAI, ethics, and production-oriented delivery.",
+    slug: "genai-product-builder",
+    title: "GenAI Product Builder",
+    subtitle: "RAG, agents and evaluation — build GenAI that actually works",
+    description:
+      "Learn how to build GenAI products with measurable quality. You’ll implement retrieval-augmented generation, prompt patterns, evaluation loops, and guardrails — and ship a working demo with clear metrics.",
     points: [
-      "Solid AI fundamentals + practical business delivery",
-      "GenAI introduction (prompting + RAG basics)",
-      "Production mindset: reliability, evaluation and safety",
+      "Build RAG systems with evaluation-driven iteration",
+      "Implement safety guardrails and quality checks",
+      "Create stakeholder-friendly demos and documentation",
     ],
-    objectifs: [
-      "Build strong foundations across core AI topics",
-      "Deliver practical AI solutions aligned with real constraints",
-      "Understand responsible AI: risk, evaluation, safety basics",
-      "Create a portfolio demonstrating applied AI skills",
-    ],
-    competences: [
-      "Core ML understanding",
-      "Problem framing & metrics",
-      "GenAI foundations (prompting + RAG concepts)",
-      "Reliability mindset (evaluation, edge cases)",
-      "Responsible AI basics",
+    format: ["Project-first approach", "Remote-friendly (worldwide cohorts)"],
+    tools: [
+      "RAG concepts",
+      "Vector DB concepts",
+      "APIs",
+      "Evaluation strategy",
     ],
     programme: [
-      "AI overview: problem framing, data, metrics, baselines",
-      "Core ML: classification/regression fundamentals",
-      "Evaluation strategy: robust metrics and validation",
-      "GenAI: prompting fundamentals and use-case patterns",
-      "RAG concepts: embeddings, retrieval, evaluation basics",
-      "Responsible AI: bias awareness, safety & limitations",
-      "Mini-project: applied AI solution with clear documentation",
+      "GenAI fundamentals & constraints",
+      "RAG architecture patterns",
+      "Evaluation: offline tests + human feedback loops",
+      "Guardrails & risk management",
+      "Capstone GenAI demo",
     ],
-    debouches: [
-      "AI Analyst",
-      "Applied AI Consultant",
-      "Data Scientist (applied)",
-      "ML Engineer (junior / applied)",
+  },
+
+  {
+    slug: "mlops-production-ai",
+    title: "MLOps & Production AI",
+    subtitle: "Deploy, monitor and iterate on real AI systems",
+    description:
+      "This track is about turning models into production systems. You learn containerization, CI/CD basics, monitoring signals (performance/drift), and safe iteration practices with versioned releases.",
+    points: [
+      "Containerize and deploy model services",
+      "Track experiments and model versions",
+      "Define monitoring signals and retraining triggers",
+      "Adopt a production-ready workflow with CI/CD fundamentals",
+    ],
+    format: [
+      "Engineering-oriented labs",
+      "Remote-friendly (worldwide cohorts)",
+    ],
+    tools: ["Docker", "FastAPI", "GitHub Actions basics", "MLflow basics"],
+    programme: [
+      "Deployment & containerization",
+      "Experiment tracking & model versioning",
+      "Monitoring signals & drift basics",
+      "CI/CD fundamentals for ML services",
+      "Capstone: production-ready ML API",
+    ],
+  },
+
+  {
+    slug: "ai-project-management-strategy",
+    title: "AI Project Management & Strategy",
+    subtitle: "Business-first AI: ROI, governance and delivery execution",
+    description:
+      "A track for people leading AI initiatives. You’ll learn how to scope projects, estimate value, define success metrics, manage stakeholders, and deliver AI initiatives responsibly.",
+    points: [
+      "Frame AI use cases, define success metrics, and estimate ROI",
+      "Manage delivery: risks, stakeholders, and iterative milestones",
+      "Build a governance mindset: quality, security, compliance basics",
+    ],
+    format: [
+      "Business-oriented projects",
+      "Remote-friendly (worldwide cohorts)",
+    ],
+    tools: [
+      "AI delivery frameworks",
+      "Metrics & ROI",
+      "Documentation patterns",
+    ],
+    programme: [
+      "Use case framing & KPI design",
+      "Roadmaps & delivery execution",
+      "Risk management & governance basics",
+      "Stakeholder communication",
+      "Capstone: AI strategy doc + delivery plan",
     ],
   },
 ];

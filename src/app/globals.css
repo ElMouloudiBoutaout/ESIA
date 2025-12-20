@@ -132,3 +132,101 @@ h2 {
   white-space: nowrap;
   border: 0;
 }
+/* ===== World Cohort Badge (no styled-jsx) ===== */
+.worldBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(63, 63, 70, 0.8);
+  background: rgba(9, 9, 11, 0.35);
+  backdrop-filter: blur(10px);
+}
+
+.worldBadge .txt {
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.worldBadge .line1 {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(244, 244, 245, 0.95);
+}
+
+.worldBadge .line2 {
+  margin-top: 2px;
+  font-size: 11px;
+  color: rgba(161, 161, 170, 0.95);
+}
+
+.worldBadge .globe {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 auto;
+
+  background: linear-gradient(
+    135deg,
+    rgba(207, 26, 125, 0.9),
+    rgba(136, 54, 242, 0.9),
+    rgba(107, 62, 253, 0.9)
+  );
+
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+    0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* rotating “meridians” */
+.worldBadge .globe::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0px,
+    rgba(255, 255, 255, 0) 10px,
+    rgba(255, 255, 255, 0.18) 11px,
+    rgba(255, 255, 255, 0) 12px
+  );
+  transform: rotate(25deg);
+  animation: worldSpin 3.8s linear infinite;
+  opacity: 0.55;
+  mix-blend-mode: overlay;
+}
+
+/* subtle highlight */
+.worldBadge .globe::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0) 55%
+  );
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+@keyframes worldSpin {
+  from {
+    transform: rotate(25deg) translateX(-10%);
+  }
+  to {
+    transform: rotate(25deg) translateX(10%);
+  }
+}
+
+/* mobile: compacte */
+@media (max-width: 768px) {
+  .worldBadge {
+    padding: 8px 10px;
+  }
+  .worldBadge .line2 {
+    display: none;
+  }
+}
