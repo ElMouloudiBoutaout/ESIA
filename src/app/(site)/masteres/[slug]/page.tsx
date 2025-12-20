@@ -1,7 +1,6 @@
 import Container from "@/components/Container";
 import PageHeader from "@/components/PageHeader";
 import { masteres } from "@/data/masteres";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
 function List({ items }: { items?: string[] }) {
@@ -22,7 +21,10 @@ export default async function MastereDetailPage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
+  // ✅ Next.js 15/16 : params est une Promise → il faut await
   const { slug } = await params;
+
+  // ✅ robustesse : si jamais le slug arrive encodé
   const decodedSlug = decodeURIComponent(slug);
 
   const m = masteres.find((x) => x.slug === decodedSlug);
@@ -50,22 +52,6 @@ export default async function MastereDetailPage({
               Key outcomes
             </p>
             <List items={m.points ?? m.objectifs ?? m.programme ?? []} />
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/contact"
-                className="btn-gradient no-underline inline-flex items-center justify-center px-6 py-3 text-sm"
-              >
-                Request a brochure
-              </Link>
-
-              <Link
-                href="/masteres"
-                className="no-underline inline-flex items-center justify-center rounded-xl border border-zinc-700 px-6 py-3 text-sm font-semibold text-white hover:bg-zinc-900 transition"
-              >
-                Back to all programs
-              </Link>
-            </div>
           </div>
 
           <div className="rounded-2xl border border-zinc-800 bg-zinc-900/30 p-6">

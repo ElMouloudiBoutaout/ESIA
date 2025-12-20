@@ -12,7 +12,7 @@ export type MasterProgram = {
 export const masteres: MasterProgram[] = [
   {
     slug: "data-scientist-4-0",
-    title: "Data Scientist 4.0",
+    title: "Data Scientist 4.0 & Industrial Data Analytics",
     subtitle: "End-to-end ML + GenAI, from data to production systems",
     description:
       "Data Scientist 4.0 is a modern, applied track built for people who want to ship real AI products. You’ll learn the full lifecycle: data preparation, modeling (ML & deep learning), GenAI patterns, evaluation, deployment, monitoring, and iteration with production constraints.",
