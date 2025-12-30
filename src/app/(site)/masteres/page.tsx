@@ -19,12 +19,12 @@ function Card({
   points,
 }: {
   title: string;
-  subtitle?: string; // ✅ devient optionnel
+  subtitle?: string; // optionnel
   href: string;
   points?: string[];
 }) {
   const safePoints = Array.isArray(points) ? points : [];
-  const safeSubtitle = subtitle ?? ""; // ✅ fallback
+  const safeSubtitle = subtitle ?? "";
 
   return (
     <div className="group rounded-2xl border border-zinc-800 bg-zinc-900/30 p-6 transition hover:bg-zinc-900/50">
@@ -106,7 +106,7 @@ export default function MasteresPage() {
                 title={m.title}
                 subtitle={m.subtitle}
                 href={`/masteres/${m.slug}`}
-                points={m.points ?? m.objectifs ?? m.programme ?? []}
+                points={m.points ?? m.programme ?? []}
               />
             ))}
           </div>
