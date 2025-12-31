@@ -82,17 +82,11 @@ export default function PromoModal() {
         <h2 className="text-xl font-bold mb-2">Special 2026 Discount 🎉</h2>
 
         <p className="mb-3 text-sm text-zinc-300">
-          Enjoy <strong>30% off</strong> on{" "}
-          <strong>all our master's programs</strong> for 2026.
+          Enjoy <strong>30% off</strong> on <strong>all our master's programs</strong> for 2026.
         </p>
 
         <p className="mb-3 text-sm">
-          Original price:{" "}
-          <del className="text-zinc-400">${originalPrice.toLocaleString()}</del>{" "}
-          →{" "}
-          <span className="text-green-400 font-semibold">
-            ${finalPrice.toLocaleString()}
-          </span>
+          Original price: <del className="text-zinc-400">${originalPrice.toLocaleString()}</del> → <span className="text-green-400 font-semibold">${finalPrice.toLocaleString()}</span>
         </p>
 
         <p className="mb-4 text-sm text-zinc-300">
