@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Container from "@/components/Container";
 import AnimatedHeadline from "@/components/AnimatedHeadline";
+import PromoModal from "@/components/PromoModal";
 
 function Pill({ children }: { children: React.ReactNode }) {
   return (
@@ -83,6 +84,7 @@ function RoleBadge({ children }: { children: React.ReactNode }) {
 export default function HomePage() {
   return (
     <section className="py-14 sm:py-20">
+      <PromoModal />
       <Container>
         {/* HERO */}
         <div className="max-w-4xl">
