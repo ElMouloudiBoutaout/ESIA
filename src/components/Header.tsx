@@ -6,7 +6,7 @@ import WorldCohortBadge from "@/components/WorldCohortBadge";
 const nav = [
   { href: "/", label: "Home" },
   { href: "/masteres", label: "Master’s" },
-  { href: "/formations", label: "Trainings" },
+  { href: "/trainings", label: "Trainings" },
   { href: "/projets", label: "Projects" },
   { href: "/recherche", label: "Research" },
   { href: "/blog", label: "Blog" },
